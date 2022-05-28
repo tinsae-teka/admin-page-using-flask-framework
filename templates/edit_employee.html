@@ -1,0 +1,28 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h3>Edit Employee's Information</h3>
+  {% from "includes/_formhelpers.html" import render_field %}
+  <form method="POST" action="">
+    <div class="form-group">
+      {{ render_field(form.name, class_="form-control") }}
+    </div>
+    <div class="form-group">
+      {{ render_field(form.sex, class_="form-control") }}
+    </div>
+    <div class="form-group">
+      {{ render_field(form.department, class_="form-control") }} <!--id="editor"-->
+    </div>
+    <div class="form-group">
+      {{ render_field(form.phone_no, class_="form-control") }}
+    </div>
+    <div class="form-group">
+      {{ render_field(form.email, class_="form-control") }}
+    </div>
+    <div class="form-group">
+      {{ render_field(form.photo, class_="form-control") }}
+    </div>
+   
+    <p><input class="btn btn-primary" type="submit" value="Submit">
+  </form>
+{% endblock %}
